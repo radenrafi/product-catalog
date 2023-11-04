@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins:wght@300;400;500;700&display=swap');
+
+
+body{
+    main{
+        .detail-product{
+            padding: 0px;
+            .gambar-product{
+                margin: auto;
+                img{
+                    padding: 0px;
+                    // background-color:aqua;
+                    border: solid 2px #750101;
+                    border-radius: 1em;
+                    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+                }
+                .row-img{
+                    // padding: 0px;
+                    img{
+                        width: 6.3em;
+                        height: 6.3em;
+                        @media only screen and (max-width: 600px){
+                            width: 4.5em;
+                            height: 4.5em;
+                        }
+                    }
+                }
+            }
+            .desc-product{
+                font-family: 'Poppins';
+                // background-color: aqua;\
+                .detail-title{
+                    font-weight: 500;
+                }
+                .detail-price{
+                    font-weight: 400;
+                    font-size: 2em;
+                }
+                .detail-sub-title{
+                    font-weight: bold;
+                    color: #750101;
+                    // text-decoration: underline;
+                    .line{
+                        display: inline-block;
+                        width: 4em;
+                        height: 4px;
+                        background-color: grey;
+                        border-radius: 2px;
+                    }
+                }
+
+            }
+            .pesan-product{
+                margin: auto;
+                .jumlah{
+                    // margin: auto;
+                    @media only screen and (max-width: 600px){
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    background-color: #E5E5E5;
+                    border-radius: .5em;
+                    border: solid 2px #750101;
+                    margin-bottom: 1em;
+                    .jumlah-title{
+                        // background-color: grey;
+                        color: grey;
+                    }
+                    .form-control{
+                        padding: 5px;
+                        border-radius: .5em;
+                        border: solid 2px #750101;
+
+                    }
+                }
+                .btn-buy{
+                    padding: .5em 6em;
+                    background-color:  #750101;
+                    color: white;
+                    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+                }
+            }
+        }
+    }
+}
