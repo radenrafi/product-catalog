@@ -22,6 +22,8 @@
                     </div>
                 </div>
                 <div>
+                    <a href="{{ $produks->previousPageUrl() }}">Prev</a>
+                    <a href="{{ $produks->nextPageUrl() }}">Next</a>
                     <table class="table table-striped">
                         <thead>
                             <tr>
@@ -39,9 +41,10 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @forelse ($produks as $produk)
+                            @forelse ($produks as $key => $produk)
+                                <?php $produkNumber = ($produks->currentPage() - 1) * $produks->perPage() + $key + 1; ?>
                                 <tr>
-                                    <th>{{ $loop->iteration }}</th>
+                                    <th>{{ $produkNumber }}</th>
                                     <th>
                                         <a href="{{ url('/admin/produk/' . $produk->id) }}">{{ $produk->nama }}</a>
                                     </th>

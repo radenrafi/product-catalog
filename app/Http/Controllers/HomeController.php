@@ -21,9 +21,8 @@ class HomeController extends Controller
         return view('admin');
     }
 
-    public function home()
+    private function produkGambar($produks)
     {
-        $produks = Produk::all();
         $i = 0;
         $temp = collect([]);
         foreach ($produks as $produk) {
@@ -31,48 +30,43 @@ class HomeController extends Controller
                 $gambar = GambarProduk::where('produk_id', $produk->id)->latest()->first();
                 if ($gambar == null) {
                     $temp->push(['id' => $produk->id, 'nama' => $produk->nama, 'harga' => $produk->harga, 'gambar' => 'kosong.jpg']);
-                }else{
+                } else {
                     $temp->push(['id' => $produk->id, 'nama' => $produk->nama, 'harga' => $produk->harga, 'gambar' => $gambar->gambar]);
                 }
                 $i++;
-            }
-            else {
+            } else {
                 $gambar = GambarProduk::where('produk_id', $produk->id)->latest()->first();
                 if ($gambar == null) {
                     $temp->push(['id' => $produk->id, 'nama' => $produk->nama, 'harga' => $produk->harga, 'gambar' => 'kosong.jpg']);
-                }else{
+                } else {
                     $temp->push(['id' => $produk->id, 'nama' => $produk->nama, 'harga' => $produk->harga, 'gambar' => $gambar->gambar]);
                 }
             }
         }
-        return view('home2', ['produks' => $temp]);
+        return $temp;
+    }
+
+    public function home()
+    {
+        $produkAkriliks = Produk::where('kategori', 'Akrilik')->limit(4)->get();
+        $produkBukets = Produk::where('kategori', 'Buket')->limit(4)->get();
+        $produkSimpleFrames = Produk::where('kategori', 'Simple Frame')->limit(4)->get();
+        $produk3DFrames = Produk::where('kategori', '3D Frame')->limit(4)->get();
+
+        $produkAkriliks = $this->produkGambar($produkAkriliks);
+        $produkBukets = $this->produkGambar($produkBukets);
+        $produkSimpleFrames = $this->produkGambar($produkSimpleFrames);
+        $produk3DFrames = $this->produkGambar($produk3DFrames);
+
+        return view('home2', ['produkAkriliks' => $produkAkriliks, 'produkBukets' => $produkBukets, 'produkSimpleFrames' => $produkSimpleFrames, 'produk3DFrames' => $produk3DFrames]);
     }
 
     public function produk()
     {
-        $produks = Produk::all();
-        $i = 0;
-        $temp = collect([]);
-        foreach ($produks as $produk) {
-            if ($i == 0) {
-                $gambar = GambarProduk::where('produk_id', $produk->id)->latest()->first();
-                if ($gambar == null) {
-                    $temp->push(['id' => $produk->id, 'nama' => $produk->nama, 'harga' => $produk->harga, 'gambar' => 'kosong.jpg']);
-                }else{
-                    $temp->push(['id' => $produk->id, 'nama' => $produk->nama, 'harga' => $produk->harga, 'gambar' => $gambar->gambar]);
-                }
-                $i++;
-            }
-            else {
-                $gambar = GambarProduk::where('produk_id', $produk->id)->latest()->first();
-                if ($gambar == null) {
-                    $temp->push(['id' => $produk->id, 'nama' => $produk->nama, 'harga' => $produk->harga, 'gambar' => 'kosong.jpg']);
-                }else{
-                    $temp->push(['id' => $produk->id, 'nama' => $produk->nama, 'harga' => $produk->harga, 'gambar' => $gambar->gambar]);
-                }
-            }
-        }
-        return view('produk.indexUser', ['produks' => $temp]);
+        $produks = Produk::paginate(10);
+        $produks = $this->produkGambar($produks);
+        dd($produks);
+        return view('produk.indexUser', ['produks' => $produks]);
     }
 
     public function showProduk($id)
@@ -92,78 +86,26 @@ class HomeController extends Controller
 
     public function kategoriProduk($kategori)
     {
-        if ($kategori == 'learning-media') {
-            $produks = Produk::where('kategori', '=', 'Learning Media')->get();
-            $i = 0;
-            $temp = collect([]);
-            foreach ($produks as $produk) {
-                if ($i == 0) {
-                    $gambar = GambarProduk::where('produk_id', $produk->id)->latest()->first();
-                    if ($gambar == null) {
-                        $temp->push(['id' => $produk->id, 'nama' => $produk->nama, 'harga' => $produk->harga, 'gambar' => 'kosong.jpg']);
-                    }else{
-                        $temp->push(['id' => $produk->id, 'nama' => $produk->nama, 'harga' => $produk->harga, 'gambar' => $gambar->gambar]);
-                    }
-                    $i++;
-                }
-                else {
-                    $gambar = GambarProduk::where('produk_id', $produk->id)->latest()->first();
-                    if ($gambar == null) {
-                        $temp->push(['id' => $produk->id, 'nama' => $produk->nama, 'harga' => $produk->harga, 'gambar' => 'kosong.jpg']);
-                    }else{
-                        $temp->push(['id' => $produk->id, 'nama' => $produk->nama, 'harga' => $produk->harga, 'gambar' => $gambar->gambar]);
-                    }
-                }
-            }
-            return view('produk.indexUser', ['produks' => $temp]);
-        } elseif ($kategori == 'digital-book') {
-            $produks = Produk::where('kategori', '=', 'Buku Digital')->get();
-            $i = 0;
-            $temp = collect([]);
-            foreach ($produks as $produk) {
-                if ($i == 0) {
-                    $gambar = GambarProduk::where('produk_id', $produk->id)->latest()->first();
-                    if ($gambar == null) {
-                        $temp->push(['id' => $produk->id, 'nama' => $produk->nama, 'harga' => $produk->harga, 'gambar' => 'kosong.jpg']);
-                    }else{
-                        $temp->push(['id' => $produk->id, 'nama' => $produk->nama, 'harga' => $produk->harga, 'gambar' => $gambar->gambar]);
-                    }
-                    $i++;
-                }
-                else {
-                    $gambar = GambarProduk::where('produk_id', $produk->id)->latest()->first();
-                    if ($gambar == null) {
-                        $temp->push(['id' => $produk->id, 'nama' => $produk->nama, 'harga' => $produk->harga, 'gambar' => 'kosong.jpg']);
-                    }else{
-                        $temp->push(['id' => $produk->id, 'nama' => $produk->nama, 'harga' => $produk->harga, 'gambar' => $gambar->gambar]);
-                    }
-                }
-            }
-            return view('produk.indexUser', ['produks' => $temp]);
-        } else {
-            $produks = Produk::where('kategori', '=', 'Metaverse')->get();
-            $i = 0;
-            $temp = collect([]);
-            foreach ($produks as $produk) {
-                if ($i == 0) {
-                    $gambar = GambarProduk::where('produk_id', $produk->id)->latest()->first();
-                    if ($gambar == null) {
-                        $temp->push(['id' => $produk->id, 'nama' => $produk->nama, 'harga' => $produk->harga, 'gambar' => 'kosong.jpg']);
-                    }else{
-                        $temp->push(['id' => $produk->id, 'nama' => $produk->nama, 'harga' => $produk->harga, 'gambar' => $gambar->gambar]);
-                    }
-                    $i++;
-                }
-                else {
-                    $gambar = GambarProduk::where('produk_id', $produk->id)->latest()->first();
-                    if ($gambar == null) {
-                        $temp->push(['id' => $produk->id, 'nama' => $produk->nama, 'harga' => $produk->harga, 'gambar' => 'kosong.jpg']);
-                    }else{
-                        $temp->push(['id' => $produk->id, 'nama' => $produk->nama, 'harga' => $produk->harga, 'gambar' => $gambar->gambar]);
-                    }
-                }
-            }
-            return view('produk.indexUser', ['produks' => $temp]);
+        if ($kategori == 'akrilik') {
+            $produks = Produk::where('kategori', '=', 'Akrilik')->get();
+            $produks = $this->produkGambar($produks);
+
+            return view('produk.indexUser', ['produks' => $produks]);
+        } elseif ($kategori == 'buket') {
+            $produks = Produk::where('kategori', '=', 'Buket')->get();
+            $produks = $this->produkGambar($produks);
+
+            return view('produk.indexUser', ['produks' => $produks]);
+        } elseif ($kategori == 'simple-frame') {
+            $produks = Produk::where('kategori', '=', 'Simple Frame')->get();
+            $produks = $this->produkGambar($produks);
+
+            return view('produk.indexUser', ['produks' => $produks]);
+        } elseif ($kategori == '3d-frame') {
+            $produks = Produk::where('kategori', '=', '3D Frame')->get();
+            $produks = $this->produkGambar($produks);
+
+            return view('produk.indexUser', ['produks' => $produks]);
         }
     }
 }
