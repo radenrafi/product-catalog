@@ -11,17 +11,19 @@
     <link rel="stylesheet" href="{{asset('css/welcome.css')}}">
     <link rel="stylesheet" href="{{asset('css/canvas.css')}}">
     <link rel="stylesheet" href="{{asset('css/detail-product.css')}}">
+    <link rel="stylesheet" href="{{asset('css/home.css')}}">
 
-    <title>@yield('title', 'DLI Store')</title>
+    {{-- <title>@yield('title', 'DLI Store')</title> --}}
+    <title>{{ config('app.name', 'Ardians ART') }}</title>
   </head>
   <body>
     {{--  begin navbar desktop  --}}
     <header class="d-none d-lg-block mb-3 header-desktop">
         <nav class="navbar navbar-expand-lg">
             <div class="container container-fluid">
-                <a class="navbar-brand d-flex flex-row align-items-center" href="#">
-                    <img src="{{asset('images/logo.png')}}" alt="" width="50" height="55" class="d-inline-block align-text-top">
-                    DLISTORE
+                <a class="navbar-logo navbar-brand d-flex flex-row align-items-center" href="#">
+                    <img src="{{asset('images/logo_aa.png')}}" alt="" width="auto" height="55" class="d-inline-block align-text-top">
+                    <span>Ardians ART</span>
                 </a>
                 <div class="nav-desktop-middle">
                     <ul class="navbar-nav">
@@ -39,7 +41,7 @@
                 <div class="d-flex flex-row align-items-center">
                     <form action="{{ url('/hasil') }}" class="d-flex flex-row align-items-center" method="GET">
                         @csrf
-                        <input type="text" name="s" class="form-control">
+                        <input type="text" name="s" placeholder="cari produk" class="form-control">
                         <i type="submit" class="bi bi-search mx-4"></i>
                     </form>
                 </div>
@@ -54,9 +56,9 @@
       {{--  begin logo mobile  --}}
       <nav class="navbar fixed-top bg-light navbar-mobile">
         <div class="px-1 d-flex justify-content-start align-items-center">
-            <img src="{{asset('images/logo.png')}}" alt=""  width="50" height="55" class="d-inline-block align-text-top mx-1">
+            <img src="{{asset('images/logo_aa.png')}}" alt=""  width="50" height="55" class="d-inline-block align-text-top mx-1">
             <h5>
-                DLISTORE
+              Ardians ART
             </h5>
         </div>
       </nav>
@@ -64,92 +66,91 @@
     </header>
     {{--  ending navbar mobile  --}}
 
-    <main class="container">
+    <main>
         @yield('content')
     </main>
 
-    <footer>
-        {{--  begin footer mobile  --}}
-        <div class="d-lg-none footer-mobile">
-          <div class="navbar fixed-bottom d-flex justify-content-center bg-light footer-mobile-box">
-            <div class="row">
-              <div class="col">
-                <a href="/home" class="button button-nav-mobile">
-                  <i class="bi bi-house-door d-flex justify-content-center"></i>
-                  <h6>Home</h6>
-                </a>
-              </div>
-              <div class="col">
-                <a href="/product" class="button button-nav-mobile">
-                  <i class="bi bi-box-seam d-flex justify-content-center"></i>
-                  <h6>Product</h6>
-                </a>
-              </div>
-              <div class="col">
-                <a href="/about" class="button button-nav-mobile">
-                  <i class="bi bi-info-circle d-flex justify-content-center"></i>
-                  <h6>About</h6>
-                </a>
-              </div>
-            </div>
+    {{--  begin footer mobile  --}}
+    <div class="d-lg-none footer-mobile">
+      <div class="navbar fixed-bottom d-flex justify-content-center bg-light footer-mobile-box">
+        <div class="row">
+          <div class="col">
+            <a href="/" class="button button-nav-mobile nav-link active" aria-current="page" >
+              <i class="bi bi-house-door d-flex justify-content-center"></i>
+              <h6>Home</h6>
+            </a>
+          </div>
+          <div class="col">
+            <a class="button button-nav-mobile nav-link" href="{{ url('/produk') }}">
+              <i class="bi bi-box-seam d-flex justify-content-center"></i>
+              <h6>Product</h6>
+            </a>
+          </div>
+          <div class="col">
+            <a href="/about" class="button button-nav-mobile nav-link">
+              <i class="bi bi-info-circle d-flex justify-content-center"></i>
+              <h6>About</h6>
+            </a>
           </div>
         </div>
-        {{--  ending footer mobile  --}}
+      </div>
+    </div>
+    {{--  ending footer mobile  --}}
 
-        {{--  begin footer desktop  --}}
-        <div class="d-none d-lg-block footer-desktop">
-            <div class="container">
-                <div class="row row-cols-5 py-5 mt-5 border-top">
-                    <div class="col footer-brand">
-                        <a class="navbar-brand d-flex flex-row align-items-center" href="#">
-                            <img src="{{asset('images/logo.png')}}" alt="" width="50" height="55" class="d-inline-block align-text-top">
-                            DLISTORE
-                        </a>
-                        <p>Designed &copy;DLI2022</p>
-                        <br>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, dicta?</p>
-                    </div>
-
-                    <div class="col">
-                    </div>
-
-                    <div class="col">
-                        <h5>Section</h5>
-                        <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col">
-                        <h5>Section</h5>
-                        <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col">
-                        <h5>Section</h5>
-                        <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-                        </ul>
-                    </div>
-                    </div>
-              </div>
+    <div class="d-none d-lg-block footer-desktop">
+      <div class="bg-light text-center text-white mt-5">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a
+              class="btn text-white btn-floating m-1"
+              style="background-color: #3b5998;"
+              href="#!"
+              role="button"
+              >
+              <i class="bi bi-facebook"></i></a>
+      
+            <!-- Twitter -->
+            <a
+              class="btn text-white btn-floating m-1"
+              style="background-color: #19232b;"
+              href="#!"
+              role="button"
+              ><i class="bi bi-twitter"></i
+            ></a>
+      
+            <!-- Instagram -->
+            <a
+              class="btn text-white btn-floating m-1"
+              style="background-color: #ac2bac;"
+              href="#!"
+              role="button"
+              ><i class="bi bi-instagram"></i
+            ></a>
+      
+            <!-- Linkedin -->
+            <a
+              class="btn text-white btn-floating m-1"
+              style="background-color: #0082ca;"
+              href="#!"
+              role="button"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+          </section>
+          <!-- Section: Social media -->
         </div>
-        {{--  ending footer desktop  --}}
-    </footer>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: #ceae87ff;">
+          © 2023 Copyright:
+          <a class="text-white" href="https://baikstudio.my.id/">Baiq Studio</a>
+        </div>
+        <!-- Copyright -->
+      </div>
+    </div>
 
 
 

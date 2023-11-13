@@ -1,10 +1,8 @@
 @extends('layouts.canvas')
 
-@section('title', 'Produk')
-
 @section('content')
         {{--  begin of kategori  --}}
-        <div class="d-flex justify-content-start align-items-center text-center category">
+        <div class="container d-flex justify-content-start align-items-center text-center category">
             <div class="button-group" role="group">
               <figure class="figure">
                 <a href="{{ url('/produk') }}" class="d-flex flex-row">

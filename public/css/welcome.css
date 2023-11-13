@@ -1,155 +1,133 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins:wght@300;400;700&display=swap");
 body header .navbar-expand-lg .container-fluid a {
-  font-family: 'Poppins';
+  gap: 0.5em;
+  color: #2f333f;
+}
+body header .navbar-expand-lg .container-fluid a span {
+  font-family: "Cinzel", serif;
   text-decoration: none;
-  color: #8D8DAA;
+  color: #ceae87;
   font-weight: bold;
 }
-
 body header .navbar-expand-lg .container-fluid .nav-desktop-middle a {
   font-weight: lighter;
 }
-
 body header .navbar-mobile {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
 }
-
 body header .navbar-mobile h5 {
+  font-family: "Cinzel", serif;
   font-weight: bold;
-  color: #8D8DAA;
+  color: #ceae87;
 }
-
 body main .product .card-product {
   padding: 0px 0px 8px;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   border-color: transparent;
   background-color: transparent;
-  border-radius: 25px;
-  box-shadow: 0px 4px 4px rgba(134, 139, 146, 0.6), -9px -9px 16px rgba(231, 223, 223, 0.781);
-  color: #747679;
+  border-radius: 0.5em;
+  box-shadow: 0px 1px 1px rgba(166, 168, 170, 0.315), -9px -9px 16px rgba(231, 223, 223, 0.781);
+  color: rgb(116, 118, 121);
+  border: 1px solid #ceae87;
   cursor: pointer;
 }
-
 @media only screen and (max-width: 600px) {
   body main .product .card-product {
-    border-radius: 10px;
+    border-radius: 0.3em;
     padding: 0px 0px 8px;
   }
 }
-
 body main .product .card-product .card-body {
   margin: 0px;
   padding: 5px;
 }
-
 body main .product .card-product .card-body .card-tittle {
   margin: 0px;
 }
-
 body main .product .card-product .card-body .card-price {
   margin: 0px 0px 8px;
 }
-
 body main .product .card-product img {
-  padding: .7em;
-  border-radius: 25px;
+  padding: 0.7em;
+  border-radius: 0.5em;
   height: 20rem;
   object-fit: cover;
 }
-
 @media only screen and (max-width: 600px) {
   body main .product .card-product img {
     height: 10rem;
     border-radius: 15px;
   }
 }
-
 body main .product .card-product .btn-product {
-  padding: .5em 2em;
-  background-color: #750101;
+  padding: 0.5em 2em;
+  background-color: #ceae87;
   color: white;
 }
-
 body main .category .button-group {
   overflow: auto;
   white-space: nowrap;
   padding-left: 0px;
   padding-right: 0px;
 }
-
 body main .category .button-group .figure {
   margin: 0.1em;
   margin-top: 1em;
 }
-
 @media only screen and (max-width: 600px) {
   body main .category .button-group .figure {
-    margin-top: .2em;
+    margin-top: 0.2em;
   }
 }
-
 body main .category .button-group .figure a {
   text-decoration: none;
   font-weight: lighter;
   color: #8D8DAA;
   border-radius: 2px;
 }
-
 body main .category .button-group .figure a:hover {
   font-weight: regular;
   background-color: #750101;
   color: #fff;
   border-radius: em;
 }
-
 body main .category .button-group .figure a .img-fluid {
   margin: 0px;
-  padding: .2em .5em;
+  padding: 0.2em 0.5em;
 }
-
 body main .carousel .carousel-desktop .carousel-indicators .carousel-indicators-item {
   color: red;
 }
-
 body main .carousel .btn-control .carousel-control-prev .carousel-control-prev-icon {
   color: #750101;
 }
-
 body footer .footer-mobile {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   margin-bottom: 6rem;
 }
-
 body footer .footer-mobile a {
   text-decoration: none;
   color: #8D8DAA;
 }
-
 body footer .footer-mobile a:hover {
   color: #750101;
 }
-
 body footer .footer-mobile a:hover h6 {
   font-weight: bolder;
 }
-
 body footer .footer-desktop {
   background-color: #750101;
   color: #fff;
 }
-
 body footer .footer-desktop .container .border-top .footer-brand {
   color: white;
 }
-
 body footer .footer-desktop .container .border-top .footer-brand a {
   text-decoration: none;
   font-weight: bold;
   font-size: 1.5em;
   color: white;
 }
-
 body footer .footer-desktop .container .border-top a {
   color: white;
 }

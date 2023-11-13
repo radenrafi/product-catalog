@@ -1,7 +1,5 @@
 @extends('layouts.canvas')
 
-@section('title', 'DLI Store')
-
 @section('content')
         {{--  begin of carousel  --}}
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -11,32 +9,18 @@
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             {{--  begin carousel desktop  --}}
-            <div class="carousel-inner d-none d-lg-block carousel-desktop">
+            <div class="carousel-inner carousel-desktop">
                 <div class="carousel-item active">
-                  <img src="{{asset('images/welcome/carousel1.png')}}" class="d-block w-100" alt="...">
+                  <img src="{{asset('images/welcome/crsl-1.jpg')}}" class="d-block w-100" height="500" style="object-fit: cover; object-position: center" alt="...">
                 </div>
                 <div class="carousel-item">
-                  <img src="{{asset('images/welcome/carousel2.png')}}" class="d-block w-100" alt="...">
+                  <img src="{{asset('images/welcome/crsl-2.jpg')}}" class="d-block w-100" height="500" style="object-fit: cover; object-position: center"  alt="...">
                 </div>
                 <div class="carousel-item">
-                  <img src="{{asset('images/welcome/carousel3.png')}}" class="d-block w-100" alt="...">
+                  <img src="{{asset('images/welcome/crsl-3.jpg')}}" class="d-block w-100" height="500" style="object-fit: cover; object-position: center"  alt="...">
                 </div>
             </div>
             {{--  ending carousel desktop  --}}
-
-            {{--  Begin carousel mobile  --}}
-            <div class="carousel-inner d-lg-none">
-              <div class="carousel-item active">
-                <img src="{{asset('images/welcome/carousel1.png')}}" class="d-block w-100" style="height: 12rem" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="{{asset('images/welcome/carousel2.png')}}" class="d-block w-100" style="height: 12rem" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="{{asset('images/welcome/carousel3.png')}}" class="d-block w-100" style="height: 12rem" alt="...">
-              </div>
-            </div>
-            {{--  ending carousel mobile  --}}
 
             <div class="btn-control">
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -52,29 +36,35 @@
         {{--  ending of caraousel  --}}
 
         {{--  begin of kategori  --}}
-        <div class="d-flex justify-content-start text-center category">
-            <div class="button-group" role="group">
-              <figure class="figure">
-                <a href="{{ url('/') }}" class="d-flex flex-row">
-                    <p class="img-fluid">Semua</p>
-                </a>
-              </figure>
-              <figure class="figure">
-                <a href="{{ url('/produk/kategori/learning-media') }}" class="d-flex flex-row">
-                    <p class="img-fluid">Learning Media</p>
-                </a>
-              </figure>
-              <figure class="figure">
-                <a href="{{ url('/produk/kategori/digital-book') }}" class="d-flex flex-row">
-                    <p class="img-fluid">Digital Book</p>
-                </a>
-              </figure>
-              <figure class="figure">
-                <a href="{{ url('/produk/kategori/metaverse') }}" class="d-flex flex-row">
-                    <p class="img-fluid">Metaverse</p>
-                </a>
-              </figure>
-            </div>
+        <div class="container mt-5">
+          <div class="text-center product-home">
+            <p>Produk kami</p>
+            <h2>Koleksi Produk</h2>
+          </div>
+          <div class="d-flex justify-content-center text-center category">
+              <div class="button-group" role="group">
+                <figure class="figure">
+                  <a href="{{ url('/') }}" class="d-flex flex-row">
+                      <p class="img-fluid">Semua</p>
+                  </a>
+                </figure>
+                <figure class="figure">
+                  <a href="{{ url('/produk/kategori/learning-media') }}" class="d-flex flex-row">
+                      <p class="img-fluid">Learning Media</p>
+                  </a>
+                </figure>
+                <figure class="figure">
+                  <a href="{{ url('/produk/kategori/digital-book') }}" class="d-flex flex-row">
+                      <p class="img-fluid">Digital Book</p>
+                  </a>
+                </figure>
+                <figure class="figure">
+                  <a href="{{ url('/produk/kategori/metaverse') }}" class="d-flex flex-row">
+                      <p class="img-fluid">Metaverse</p>
+                  </a>
+                </figure>
+              </div>
+          </div>
         </div>
         {{--  ending of kategori  --}}
 
@@ -93,7 +83,7 @@
                                 </div>
                                 <div class="col d-flex justify-content-center align-items-center">
                                     <a href="{{ url('/produk/'.$produk['id']) }}" class="btn d-flex justify-content-center align-items-center btn-product">
-                                        Buy
+                                        Beli
                                     </a>
                                 </div>
                             </div>

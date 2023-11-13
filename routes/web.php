@@ -26,7 +26,7 @@ Route::get('/about', [HomeController::class, 'about']);
 Route::get('/hasil', [PencarianController::class, 'proses']);
 
 Route::prefix('/admin')->group(function () {
-    Route::get('/', [HomeController::class, 'index'])->name('home')->middleware('auth');
+    Route::get('/', [ProdukController::class, 'index'])->name('home')->middleware('auth');
     Route::resource('/produk', ProdukController::class);
     Route::resource('/produk/{produk_id}/gambar', GambarProdukController::class);
 });
