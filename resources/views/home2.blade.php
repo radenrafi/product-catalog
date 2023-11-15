@@ -74,7 +74,6 @@
     <div class="container product">
         <section>
             <div class="row">
-                @dump($produkAkriliks)
                 @foreach ($produkAkriliks as $produk)
                     <div class="col-6 col-lg-4 mt-3">
                         <div class="card card-product">
