@@ -2,7 +2,7 @@
 
 @section('content')
     {{--  begin of kategori  --}}
-    <div class="d-flex justify-content-start align-items-center text-center category">
+    <div class="container d-flex justify-content-start align-items-center text-center category">
         <div class="button-group" role="group">
             <figure class="figure">
                 <a href="{{ url('/produk') }}" class="d-flex flex-row">
@@ -37,8 +37,6 @@
     <div class="container product">
         <section>
             <div class="row">
-                <a href="{{ $produks->previousPageUrl() }}">Prev</a>
-                <a href="{{ $produks->nextPageUrl() }}">Next</a>
                 @forelse ($produks as $produk)
                     <div class="col-6 col-lg-4 mt-3">
                         <div class="card card-product">
@@ -65,7 +63,10 @@
                 @empty
                     <h3 class="text-center my-5">Produk Tidak Ditemukan</h3>
                 @endforelse
-
+            </div>
+            <div class="navigation">
+                <a class="btn" href="{{ $produks->previousPageUrl() }}">Prev</a>
+                <a class="btn" href="{{ $produks->nextPageUrl() }}">Next</a>
             </div>
         </section>
     </div>

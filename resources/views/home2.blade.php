@@ -27,32 +27,6 @@
             </div>
         </div>
         {{--  ending carousel desktop  --}}
-    {{--  begin of carousel  --}}
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-        </div>
-        {{--  begin carousel desktop  --}}
-        <div class="carousel-inner carousel-desktop">
-            <div class="carousel-item active">
-                <img src="{{ asset('images/welcome/crsl-1.jpg') }}" class="d-block w-100" height="500"
-                    style="object-fit: cover; object-position: center" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="{{ asset('images/welcome/crsl-2.jpg') }}" class="d-block w-100" height="500"
-                    style="object-fit: cover; object-position: center" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="{{ asset('images/welcome/crsl-3.jpg') }}" class="d-block w-100" height="500"
-                    style="object-fit: cover; object-position: center" alt="...">
-            </div>
-        </div>
-        {{--  ending carousel desktop  --}}
 
         <div class="btn-control">
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -207,8 +181,6 @@
                                     <p class="card-price">Rp. {{ $produk->harga }}</p>
                                 </div>
                                 <div class="col d-flex justify-content-center align-items-center">
-                                    <a href="{{ url('/produk/' . $produk['id']) }}"
-                                        class="btn d-flex justify-content-center align-items-center btn-product">
                                     <a href="{{ url('/produk/' . $produk['id']) }}"
                                         class="btn d-flex justify-content-center align-items-center btn-product">
                                         Buy
