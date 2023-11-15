@@ -23,6 +23,6 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('12345678'),
         ]);
 
-        Produk::factory()->count(50)->create();
+        // Produk::factory()->count(50)->create();
     }
 }
