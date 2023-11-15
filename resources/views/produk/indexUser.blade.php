@@ -1,10 +1,10 @@
 @extends('layouts.canvas')
 
 @section('content')
-        {{--  begin of kategori  --}}
-        <div class="d-flex justify-content-start align-items-center text-center category">
-            <div class="button-group" role="group">
-              <figure class="figure">
+    {{--  begin of kategori  --}}
+    <div class="d-flex justify-content-start align-items-center text-center category">
+        <div class="button-group" role="group">
+            <figure class="figure">
                 <a href="{{ url('/produk') }}" class="d-flex flex-row">
                     <p class="img-fluid">Semua</p>
                 </a>
@@ -70,5 +70,4 @@
         </section>
     </div>
     {{--  Ending of card  --}}
-
 @endsection

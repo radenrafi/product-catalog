@@ -23,10 +23,10 @@ class HomeController extends Controller
 
     public function home()
     {
-        $produkAkriliks = Produk::where('kategori', 'Akrilik')->limit(4)->get();
-        $produkBukets = Produk::where('kategori', 'Buket')->limit(4)->get();
-        $produkSimpleFrames = Produk::where('kategori', 'Simple Frame')->limit(4)->get();
-        $produk3DFrames = Produk::where('kategori', '3D Frame')->limit(4)->get();
+        $produkAkriliks = Produk::where('kategori', 'Akrilik')->limit(3)->get();
+        $produkBukets = Produk::where('kategori', 'Buket')->limit(3)->get();
+        $produkSimpleFrames = Produk::where('kategori', 'Simple Frame')->limit(3)->get();
+        $produk3DFrames = Produk::where('kategori', '3D Frame')->limit(3)->get();
 
         return view('home2', ['produkAkriliks' => $produkAkriliks, 'produkBukets' => $produkBukets, 'produkSimpleFrames' => $produkSimpleFrames, 'produk3DFrames' => $produk3DFrames]);
     }
