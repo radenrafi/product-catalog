@@ -30,7 +30,24 @@ body{
         }
     }
     main{
+        .title-category{
+            margin:  3em 0em;
+            display: flex;
+            flex-direction: column;
+            h2{
+                text-align: center;
+                font-family: 'Cinzel', serif;
+                font-weight: bold;
+            }
+            p{
+                text-align: center;
+            }
+        }
         .product{
+            span{
+                font-family: 'Cinzel', serif;
+                font-weight: bold;
+            }
             .card-product{
                 padding: 0px 0px 8px;
                 font-family: 'Poppins';
@@ -96,7 +113,7 @@ body{
                         border-radius: 2px;
                         &:hover{
                             font-weight: regular;
-                            background-color:#750101;
+                            background-color:#ceae87ff;
                             color: #fff;
                             border-radius: em;
                         }
@@ -109,11 +126,6 @@ body{
             }
         }
         .carousel{
-            // border-radius: 1.5em;
-            // background-color: red;
-            // &:hover{
-            // border-radius: 1.5em;
-            // }
             .carousel-desktop{
                 .carousel-indicators{
                         // background-color: red;
