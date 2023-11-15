@@ -81,6 +81,17 @@ body main .product .card-product .btn-product {
   background-color: #ceae87;
   color: white;
 }
+body main .product .navigation {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+body main .product .navigation a {
+  color: rgb(201, 191, 160);
+  padding: 0.5em 3em;
+  border: 1px solid rgb(201, 191, 160);
+}
 body main .category .button-group {
   overflow: auto;
   white-space: nowrap;
@@ -117,34 +128,4 @@ body main .carousel .carousel-desktop .carousel-indicators .carousel-indicators-
 }
 body main .carousel .btn-control .carousel-control-prev .carousel-control-prev-icon {
   color: #750101;
-}
-body footer .footer-mobile {
-  font-family: "Poppins";
-  margin-bottom: 6rem;
-}
-body footer .footer-mobile a {
-  text-decoration: none;
-  color: #8D8DAA;
-}
-body footer .footer-mobile a:hover {
-  color: #750101;
-}
-body footer .footer-mobile a:hover h6 {
-  font-weight: bolder;
-}
-body footer .footer-desktop {
-  background-color: #750101;
-  color: #fff;
-}
-body footer .footer-desktop .container .border-top .footer-brand {
-  color: white;
-}
-body footer .footer-desktop .container .border-top .footer-brand a {
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.5em;
-  color: white;
-}
-body footer .footer-desktop .container .border-top a {
-  color: white;
 }
