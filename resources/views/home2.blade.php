@@ -43,38 +43,6 @@
     </div>
     {{--  ending of caraousel  --}}
 
-    {{-- begin of kategori  --}}
-    {{-- <div class="d-flex justify-content-start text-center category">
-        <div class="button-group" role="group">
-            <figure class="figure">
-                <a href="{{ url('/produk') }}" class="d-flex flex-row">
-                    <p class="img-fluid">Semua</p>
-                </a>
-            </figure>
-            <figure class="figure">
-                <a href="{{ url('/produk/kategori/akrilik') }}" class="d-flex flex-row">
-                    <p class="img-fluid">Akrilik</p>
-                </a>
-            </figure>
-            <figure class="figure">
-                <a href="{{ url('/produk/kategori/buket') }}" class="d-flex flex-row">
-                    <p class="img-fluid">Buket</p>
-                </a>
-            </figure>
-            <figure class="figure">
-                <a href="{{ url('/produk/kategori/simple-frame') }}" class="d-flex flex-row">
-                    <p class="img-fluid">Simple Frame</p>
-                </a>
-            </figure>
-            <figure class="figure">
-                <a href="{{ url('/produk/kategori/3d-frame') }}" class="d-flex flex-row">
-                    <p class="img-fluid">3D Frame</p>
-                </a>
-            </figure>
-        </div>
-    </div> --}}
-    {{--  ending of kategori  --}}
-
     <div class="title-category">
         <h2>Lihat Koleksi Terbaik Kami</h2>
         <p>pilih produk sesuai kebutuhanmu.</p>
@@ -102,7 +70,7 @@
                                 <div class="col d-flex justify-content-center align-items-center">
                                     <a href="{{ url('/produk/' . $produk->id) }}"
                                         class="btn d-flex justify-content-center align-items-center btn-product">
-                                        Buy
+                                        Lihat
                                     </a>
                                 </div>
                             </div>
@@ -129,7 +97,7 @@
                                 <div class="col d-flex justify-content-center align-items-center">
                                     <a href="{{ url('/produk/' . $produk->id) }}"
                                         class="btn d-flex justify-content-center align-items-center btn-product">
-                                        Buy
+                                        Lihat
                                     </a>
                                 </div>
                             </div>
@@ -156,7 +124,7 @@
                                 <div class="col d-flex justify-content-center align-items-center">
                                     <a href="{{ url('/produk/' . $produk->id) }}"
                                         class="btn d-flex justify-content-center align-items-center btn-product">
-                                        Buy
+                                        Lihat
                                     </a>
                                 </div>
                             </div>
@@ -183,7 +151,7 @@
                                 <div class="col d-flex justify-content-center align-items-center">
                                     <a href="{{ url('/produk/' . $produk['id']) }}"
                                         class="btn d-flex justify-content-center align-items-center btn-product">
-                                        Buy
+                                        Lihat
                                     </a>
                                 </div>
                             </div>

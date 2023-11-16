@@ -20,6 +20,11 @@ body header .navbar-mobile h5 {
   font-weight: bold;
   color: #ceae87;
 }
+body main .about h1 {
+  text-align: center;
+  font-family: "Cinzel", serif;
+  font-weight: bold;
+}
 body main .title-category {
   margin: 3em 0em;
   display: flex;
