@@ -8,7 +8,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <h1>{{ $produk->nama }}</h1>
-                <p>{{ $produk->kategori }}</p>
+                <p>Kategori : {{ $produk->kategori }}</p>
 
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
@@ -42,9 +42,18 @@
                 <div>
                     {!! $produk->deskripsi !!}
                 </div>
-                <h5>Harga : {{ $produk->harga }}</h5>
-                <a href="{{ $produk->link_toko }}">{{ $produk->link_toko }}</a>
-                <a href="{{ $produk->link_wa }}">{{ $produk->link_wa }}</a>
+                <div>
+                    <h5>Harga:</h5>
+                    <p>Rp. {{ $produk->harga }}</p>
+                </div>
+                <div>
+                    <h5>Link Toko:</h5>
+                    <a href="{{ $produk->link_toko }}">{{ $produk->link_toko }}</a>
+                </div>
+                <div>
+                    <h5>link WA:</h5>
+                    <a href="{{ $produk->link_wa }}">{{ $produk->link_wa }}</a>
+                </div>
                 <p>
                     <a class="btn btn-primary mt-3" href="{{ url('/admin/produk/' . $produk->id . '/gambar/create') }}"
                         role="button">Tambah Gambar</a>

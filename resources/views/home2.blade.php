@@ -59,7 +59,7 @@
                             @if ($produk->gambarProduks->isEmpty())
                                 <img src="{{ asset('gambar/produk/kosong.jpg') }}" class="card-img-top" alt="...">
                             @else
-                                <img src="{{ asset('gambar/produk/' . $produk->gambarProduks[0]) }}" class="card-img-top"
+                                <img src="{{ asset('gambar/produk/' . $produk->gambarProduks[0]->gambar) }}" class="card-img-top"
                                     alt="...">
                             @endif
                             <div class="row card-body">
@@ -86,7 +86,7 @@
                             @if ($produk->gambarProduks->isEmpty())
                                 <img src="{{ asset('gambar/produk/kosong.jpg') }}" class="card-img-top" alt="...">
                             @else
-                                <img src="{{ asset('gambar/produk/' . $produk->gambarProduks[0]) }}" class="card-img-top"
+                                <img src="{{ asset('gambar/produk/' . $produk->gambarProduks[0]->gambar) }}" class="card-img-top"
                                     alt="...">
                             @endif
                             <div class="row card-body">
@@ -113,7 +113,7 @@
                             @if ($produk->gambarProduks->isEmpty())
                                 <img src="{{ asset('gambar/produk/kosong.jpg') }}" class="card-img-top" alt="...">
                             @else
-                                <img src="{{ asset('gambar/produk/' . $produk->gambarProduks[0]) }}" class="card-img-top"
+                                <img src="{{ asset('gambar/produk/' . $produk->gambarProduks[0]->gambar) }}" class="card-img-top"
                                     alt="...">
                             @endif
                             <div class="row card-body">
@@ -140,7 +140,7 @@
                             @if ($produk->gambarProduks->isEmpty())
                                 <img src="{{ asset('gambar/produk/kosong.jpg') }}" class="card-img-top" alt="...">
                             @else
-                                <img src="{{ asset('gambar/produk/' . $produk->gambarProduks[0]) }}" class="card-img-top"
+                                <img src="{{ asset('gambar/produk/' . $produk->gambarProduks[0]->gambar) }}" class="card-img-top"
                                     alt="...">
                             @endif
                             <div class="row card-body">
