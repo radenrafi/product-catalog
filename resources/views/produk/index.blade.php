@@ -21,8 +21,9 @@
                         <a class="btn btn-primary mb-3" href="{{ url('/admin/produk/create') }}" role="button">Create</a>
                     </div>
                 </div>
-                
-                <div style="overflow-x: auto; width: 80vw;">
+
+                <div style="overflow-x: auto; width: 80vw;
+                     box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 5px rgba(0, 0, 0, 0.1) inset;">
                     <table class="table table-striped" >
                         <thead>
                             <tr>
