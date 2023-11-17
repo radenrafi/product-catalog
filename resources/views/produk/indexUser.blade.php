@@ -43,7 +43,7 @@
                             @if ($produk->gambarProduks->isEmpty())
                                 <img src="{{ asset('gambar/produk/kosong.jpg') }}" class="card-img-top" alt="...">
                             @else
-                                <img src="{{ asset('gambar/produk/' . $produk->gambarProduks[0]) }}" class="card-img-top"
+                                <img src="{{ asset('gambar/produk/' . $produk->gambarProduks[0]->gambar) }}" class="card-img-top"
                                     alt="...">
                             @endif
                             <div class="row card-body">
@@ -54,7 +54,7 @@
                                 <div class="col d-flex justify-content-center align-items-center">
                                     <a href="{{ url('/produk/' . $produk->id) }}"
                                         class="btn d-flex justify-content-center align-items-center btn-product">
-                                        Buy
+                                        Lihat
                                     </a>
                                 </div>
                             </div>

@@ -2,10 +2,15 @@ body{
     main{
         .detail-product{
             padding: 0px;
+            margin: 0px auto;
+            // border: 1px solid red;
+            border-radius: 1em;
             .gambar-product{
                 margin: auto;
                 img{
                     padding: 0px;
+                    height: 100px;
+                    width: auto;
                     // background-color:aqua;
                     border: solid 2px #ceae87ff;
                     border-radius: 1em;
@@ -48,7 +53,11 @@ body{
 
             }
             .pesan-product{
-                margin: auto;
+                margin: 0px auto;
+                // border: 1px solid red;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
                 .jumlah{
                     // margin: auto;
                     @media only screen and (max-width: 600px){
