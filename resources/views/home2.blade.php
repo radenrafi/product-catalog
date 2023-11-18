@@ -14,16 +14,16 @@
         {{--  begin carousel desktop  --}}
         <div class="carousel-inner carousel-desktop">
             <div class="carousel-item active">
-                <img src="{{ asset('images/welcome/crsl-1.jpg') }}" class="d-block w-100" height="500"
+                <img src="{{ asset('images/welcome/home (3).jpeg') }}" class="d-block w-100" height="500"
+                    style="object-fit: cover; object-position: top" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ asset('images/welcome/home (1).jpeg') }}" class="d-block w-100" height="500"
                     style="object-fit: cover; object-position: center" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="{{ asset('images/welcome/crsl-2.jpg') }}" class="d-block w-100" height="500"
-                    style="object-fit: cover; object-position: center" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="{{ asset('images/welcome/crsl-3.jpg') }}" class="d-block w-100" height="500"
-                    style="object-fit: cover; object-position: center" alt="...">
+                <img src="{{ asset('images/welcome/home (2).jpeg') }}" class="d-block w-100" height="500"
+                    style="object-fit: fill; object-position: center" alt="...">
             </div>
         </div>
         {{--  ending carousel desktop  --}}

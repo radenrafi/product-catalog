@@ -103,40 +103,37 @@
         <div class="container p-4 pb-0">
           <!-- Section: Social media -->
           <section class="mb-4">
-            <!-- Facebook -->
-            <a
-              class="btn text-white btn-floating m-1"
-              style="background-color: #3b5998;"
-              href="#!"
-              role="button"
-              >
-              <i class="bi bi-facebook"></i></a>
-      
-            <!-- Twitter -->
-            <a
-              class="btn text-white btn-floating m-1"
-              style="background-color: #19232b;"
-              href="#!"
-              role="button"
-              ><i class="bi bi-twitter"></i
-            ></a>
-      
             <!-- Instagram -->
             <a
               class="btn text-white btn-floating m-1"
-              style="background-color: #ac2bac;"
-              href="#!"
+              style="background-color: #ceae87;"
+              href="https://instagram.com/ardians.art_?igshid=OGQ5ZDc2ODk2ZA"
               role="button"
               ><i class="bi bi-instagram"></i
             ></a>
-      
-            <!-- Linkedin -->
+            <!-- Tiktok -->
             <a
               class="btn text-white btn-floating m-1"
-              style="background-color: #0082ca;"
-              href="#!"
+              style="background-color: #ceae87;"
+              href="https://www.tiktok.com/@ardians.art"
               role="button"
-              ><i class="bi bi-linkedin"></i
+              ><i class="bi bi-tiktok"></i
+            ></a>
+            <!-- Shopee -->
+            <a
+              class="btn text-white btn-floating m-1"
+              style="background-color: #ceae87;"
+              href="https://shope.ee/9p0BdBqAnA"
+              role="button"
+              ><i class="bi bi-shop"></i
+            ></a>
+            <!-- Wa -->
+            <a
+              class="btn text-white btn-floating m-1"
+              style="background-color: #ceae87;"
+              href="https://api.whatsapp.com/message/46XPLO2XULFMA1?autoload=1&app_absent=0"
+              role="button"
+              ><i class="bi bi-whatsapp"></i
             ></a>
           </section>
           <!-- Section: Social media -->
@@ -144,9 +141,9 @@
         <!-- Grid container -->
       
         <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: #ceae87ff;">
+        <div class="text-center p-3 bg-light" style="color: grey">
           © 2023 Copyright:
-          <a class="text-white" href="https://baikstudio.my.id/">Baiq Studio</a>
+          <a style="color: grey; text-decoration: none;" href="https://baikstudio.my.id/">Baiq Studio</a>
         </div>
         <!-- Copyright -->
       </div>
