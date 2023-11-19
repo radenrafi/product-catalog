@@ -51,6 +51,34 @@
     {{--  Begin of product  --}}
     <div class="container product">
         <section>
+            <span>Best Seller</span>
+            <div class="row mb-3">
+                @dump($produkBestSellers)
+                @foreach ($produkBestSellers as $produk)
+                    <div class="col-6 col-lg-4 mt-3">
+                        <div class="card card-product">
+                            @if ($produk->gambarProduks->isEmpty())
+                                <img src="{{ asset('gambar/produk/kosong.jpg') }}" class="card-img-top" alt="...">
+                            @else
+                                <img src="{{ asset('gambar/produk/' . $produk->gambarProduks[0]->gambar) }}" class="card-img-top"
+                                    alt="...">
+                            @endif
+                            <div class="row card-body">
+                                <div class="col d-flex flex-column">
+                                    <h5 class="card-title">{{ $produk->nama }}</h5>
+                                    <p class="card-price">Rp. {{ $produk->harga }}</p>
+                                </div>
+                                <div class="col d-flex justify-content-center align-items-center">
+                                    <a href="{{ url('/produk/' . $produk->id) }}"
+                                        class="btn d-flex justify-content-center align-items-center btn-product">
+                                        Lihat
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
             <span>Akrilik</span>
             <div class="row mb-3">
                 @foreach ($produkAkriliks as $produk)
