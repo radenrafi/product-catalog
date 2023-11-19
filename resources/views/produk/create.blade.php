@@ -23,6 +23,9 @@
                                 <label for="kategori">Kategori</label>
                                 <select class="form-select" name="kategori" id="kategori">
                                     <option selected>-- Pilih Kategori --</option>
+                                    <option value="Best Seller" {{ old('kategori') == 'Best Seller' ? 'selected' : '' }}>
+                                        Best Seller
+                                    </option>
                                     <option value="Akrilik" {{ old('kategori') == 'Akrilik' ? 'selected' : '' }}>
                                         Akrilik
                                     </option>

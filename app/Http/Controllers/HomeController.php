@@ -27,8 +27,9 @@ class HomeController extends Controller
         $produkBukets = Produk::where('kategori', 'Buket')->limit(3)->get();
         $produkSimpleFrames = Produk::where('kategori', 'Simple Frame')->limit(3)->get();
         $produk3DFrames = Produk::where('kategori', '3D Frame')->limit(3)->get();
+        $produkBestSellers = Produk::where('kategori', 'Best Seller')->limit(3)->get();
 
-        return view('home2', ['produkAkriliks' => $produkAkriliks, 'produkBukets' => $produkBukets, 'produkSimpleFrames' => $produkSimpleFrames, 'produk3DFrames' => $produk3DFrames]);
+        return view('home2', ['produkAkriliks' => $produkAkriliks, 'produkBukets' => $produkBukets, 'produkSimpleFrames' => $produkSimpleFrames, 'produk3DFrames' => $produk3DFrames, 'produkBestSellers' => $produkBestSellers]);
     }
 
     public function produk()
@@ -62,6 +63,8 @@ class HomeController extends Controller
             $produks = Produk::where('kategori', '=', 'Simple Frame')->paginate(10);
         } elseif ($kategori == '3d-frame') {
             $produks = Produk::where('kategori', '=', '3D Frame')->paginate(10);
+        } elseif ($kategori == 'best-seller') {
+            $produks = Produk::where('kategori', '=', 'Best Seller')->paginate(10);
         }
         return view('produk.indexUser', ['produks' => $produks]);
     }
