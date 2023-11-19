@@ -53,7 +53,6 @@
         <section>
             <span>Best Seller</span>
             <div class="row mb-3">
-                @dump($produkBestSellers)
                 @foreach ($produkBestSellers as $produk)
                     <div class="col-6 col-lg-4 mt-3">
                         <div class="card card-product">
