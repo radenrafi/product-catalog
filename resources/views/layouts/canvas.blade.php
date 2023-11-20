@@ -115,7 +115,7 @@
             <a
               class="btn text-white btn-floating m-1"
               style="background-color: #ceae87;"
-              href="https://www.tiktok.com/@ardians.art"
+              href="https://www.tiktok.com/@ardians.art_?_t=8hVAeo57gpk&_r=1"
               role="button"
               ><i class="bi bi-tiktok"></i
             ></a>
