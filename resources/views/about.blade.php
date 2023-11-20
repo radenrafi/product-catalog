@@ -26,7 +26,7 @@ Ardians Art saat ini sudah berkembang pesat, yaitu sudah tersedia di beberapa ma
             </a>
           </div>
           <div class="col">
-            <a href="https://www.tiktok.com/@ardians.art" class="d-flex flex-column align-items-center" style="margin-bottom: 5em; text-decoration: none; color: black;">
+            <a href="https://www.tiktok.com/@ardians.art_?_t=8hVAeo57gpk&_r=1" class="d-flex flex-column align-items-center" style="margin-bottom: 5em; text-decoration: none; color: black;">
               <img style="height: 10em; width: 10em;" src="{{ asset('images/logo-about (2).png') }}">
               <span>@ardians.art_</span>
             </a>
